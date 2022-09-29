@@ -389,7 +389,7 @@ font:
   mono:
     family: mononoki Nerd Font
     style: Mono
-  size: 8
+  size: 16
   offset:
     x: 0
     y: 1
