@@ -16,7 +16,8 @@ install() {
       src=$(eval echo "$line" | cut -d '=' -f 1)
       dst=$(eval echo "$line" | cut -d '=' -f 2)
       dir=$(dirname "$dst")
-      mkdir -p "$dir"  
+      mkdir -p "$dir"
+      echo "$src" "$dst"
       link_file "$src" "$dst"
     done  
   done 
