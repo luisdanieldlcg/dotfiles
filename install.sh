@@ -5,7 +5,6 @@ DOTFILES=$(pwd -P)/.dotfiles
 
 
 install() {
-  echo 'Installing dotfiles'
   
   find -H "$DOTFILES" -name 'link.path' | while read linkfile
 
@@ -16,8 +15,8 @@ install() {
       src=$(eval echo "$line" | cut -d '=' -f 1)
       dst=$(eval echo "$line" | cut -d '=' -f 2)
       dir=$(dirname "$dst")
+      echo "The directory: $dst will be linked (symlink) to $src"
       mkdir -p "$dir"
-      echo "$src" "$dst"
       link_file "$src" "$dst"
     done  
   done 

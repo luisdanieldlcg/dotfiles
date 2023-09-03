@@ -1,0 +1,10 @@
+theme = "catppuccin_mocha"
+
+[editor]
+lsp.display-inlay-hints = true
+bufferline = "multiple"
+cursorline = true
+
+[editor.cursor-shape]
+insert = "bar"
+select = "underline"
