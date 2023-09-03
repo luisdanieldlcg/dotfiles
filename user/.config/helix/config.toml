@@ -1,4 +1,0 @@
-theme = "github_dark"
-
-[keys.normal]
-"backspace" = { c = ":config-open", l = ":open ~/.config/helix/languages.toml"}
