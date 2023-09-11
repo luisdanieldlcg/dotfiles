@@ -36,7 +36,7 @@ table.insert(keys, { key = "DownArrow", mods = "CTRL", action = ac.AdjustPaneSiz
 config.disable_default_key_bindings = true
 config.color_scheme = 'Gruvbox Dark (Gogh)'
 config.font = wezterm.font {
-  family = 'Mononoki Nerd Font',
+  family = 'mononoki Nerd Font',
 }
 config.exit_behavior = "Close"
 config.window_background_opacity = 0.92
