@@ -10,4 +10,5 @@ alias grep='grep --color=auto'
 PS1='[\u@\h \W]\$ '
 
 alias hx='helix'
+alias nv='nvim'
 . "$HOME/.cargo/env"
