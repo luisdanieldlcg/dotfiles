@@ -33,14 +33,16 @@ table.insert(keys, { key = "UpArrow", mods = "CTRL", action = ac.AdjustPaneSize 
 table.insert(keys, { key = "DownArrow", mods = "CTRL", action = ac.AdjustPaneSize { 'Down', 1 }})
 -- This is where you actually apply your config choices
 -- For example, changing the color scheme:
-config.disable_default_key_bindings = true
-config.color_scheme = 'Gruvbox Dark (Gogh)'
+-- config.disable_default_key_bindings = true
+-- config.color_scheme = 'Gruvbox Dark (Gogh)'
+config.color_scheme = 'Catppuccin Mocha (Gogh)'
+
 config.font = wezterm.font {
   family = 'mononoki Nerd Font',
 }
 config.exit_behavior = "Close"
-config.window_background_opacity = 0.92
-config.font_size = 16
+config.window_background_opacity = 1.0
+config.font_size = 15
 config.default_cursor_style = 'SteadyBar'
 config.keys = keys
 -- and finally, return the configuration to wezterm
