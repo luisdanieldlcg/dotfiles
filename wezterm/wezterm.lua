@@ -10,6 +10,7 @@ local keys = {} -- Key map
 if wezterm.config_builder then
   config = wezterm.config_builder()
 end
+
 -- Key Bindings -- 
 for i = 1, 8 do
   table.insert(keys, { key = tostring(i), mods = "ALT", action = ac({ ActivateTab = i - 1 }), })
@@ -38,11 +39,12 @@ table.insert(keys, { key = "DownArrow", mods = "CTRL", action = ac.AdjustPaneSiz
 config.color_scheme = 'Catppuccin Mocha (Gogh)'
 
 config.font = wezterm.font {
-  family = 'mononoki Nerd Font',
+--  family = 'mononoki Nerd Font',
+	family = 'Iosevka Term',
 }
 config.exit_behavior = "Close"
 config.window_background_opacity = 1.0
-config.font_size = 15
+config.font_size = 14
 config.default_cursor_style = 'SteadyBar'
 config.keys = keys
 -- and finally, return the configuration to wezterm
