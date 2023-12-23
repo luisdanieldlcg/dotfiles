@@ -1,5 +1,5 @@
-# theme = "catppuccin_mocha"
-theme = "base16_transparent"
+theme = "catppuccin_macchiato"
+# theme = "base16_transparent"
 
 [editor]
 lsp.display-inlay-hints = true

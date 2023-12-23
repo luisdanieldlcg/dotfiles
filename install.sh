@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 cd "$(dirname "$0")/.."
-DOTFILES=$(pwd -P)/.dotfiles
+DOTFILES=$HOME/dotfiles/.config
 
 
 install() {
@@ -24,9 +24,7 @@ install() {
 
 link_file() {
   local src=$1 dst=$2
-  if [ -e "$dst" ]; then
-    rm "$dst"
-  fi
+  rm -rf $dst
   ln -s $src $dst
  }
 
