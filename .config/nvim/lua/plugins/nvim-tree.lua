@@ -49,7 +49,8 @@ return {
 		});
 		local keymap = vim.keymap;
 		keymap.set("n", "<leader>v", "<cmd>NvimTreeToggle<CR>");
-
+		keymap.set("n", "<A-Left>", "<C-w>h");
+		keymap.set("n", "<A-Right>", "<C-w>l");
 	end,
 }
 
