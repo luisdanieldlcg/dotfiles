@@ -44,7 +44,7 @@ config.font = wezterm.font {
 }
 config.exit_behavior = "Close"
 config.window_background_opacity = 1.0
-config.font_size = 14
+config.font_size = 15
 config.default_cursor_style = 'SteadyBar'
 config.keys = keys
 -- and finally, return the configuration to wezterm
