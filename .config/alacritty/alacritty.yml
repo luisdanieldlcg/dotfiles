@@ -8,6 +8,8 @@ import:
 cursor:
   style:
     shape: Beam
+  vi_mode_style:
+    shape: Beam 
 
 window:
   padding:
@@ -15,9 +17,11 @@ window:
     y: 15
 font:
   normal:
-    family: "Iosevka Term"
+    # family: "Iosevka Term"
+    family: "Mononoki nerd font"
     style: Regular
-  size: 16
+  # size: 16
+  size: 15
 
 key_bindings:
   # - { key: T, mods: Command, action: SpawnNewInstance }

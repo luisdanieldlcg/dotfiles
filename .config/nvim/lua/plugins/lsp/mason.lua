@@ -8,20 +8,21 @@ return {
 		local mason_lsp_config = require("mason-lspconfig")
 		mason.setup({
 			ui = {
-				icon = {
-
-				}	
+				icons = {
+					package_installed = "✓",
+					package_pending = "➜",
+					package_uninstalled = "✗"
+				}
 			}
 		})
 
 		mason_lsp_config.setup({
 			ensure_installed = {
-				"clangd",
 				"rust_analyzer",
-				"lua_ls",
+				"clangd",
+				"lua_ls"
 			},
 			automatic_installation = true,
 		})
-
 	end
 }

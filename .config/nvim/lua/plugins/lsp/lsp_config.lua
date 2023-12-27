@@ -11,10 +11,10 @@ return {
 		local keymap = vim.keymap;
 
 		local opts = { noremap = true, silent = true }
-		local on_attach = function (client, buf)
+		local on_attach = function(client, buf)
 			opts.buffer = buf;
-			keymap.set("n",	"gd", "<cmd>Telescope lsp_definitions<CR>", opts);
-			keymap.set("n",	"gD", vim.lsp.buf.declaration, opts);
+			keymap.set("n", "gd", "<cmd>Telescope lsp_definitions<CR>", opts);
+			keymap.set("n", "gD", vim.lsp.buf.declaration, opts);
 			keymap.set("n", "gr", "<cmd>Telescope lsp_references<CR>", opts);
 			keymap.set("n", "<leader>a", vim.lsp.buf.code_action, opts);
 			-- TODO: maybe add go to implementation
@@ -22,12 +22,25 @@ return {
 		local caps = cmp.default_capabilities();
 
 		local signs = { Error = " ", Warn = " ", Hint = "󰠠 ", Info = " " }
-    	for type, icon in pairs(signs) do
-      		local hl = "DiagnosticSign" .. type
-      		vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
-    	end
+		for type, icon in pairs(signs) do
+			local hl = "DiagnosticSign" .. type
+			vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
+		end
 
-
+		lsp["rust_analyzer"].setup({
+			capabilities = caps,
+			on_attach = on_attach,
+			settings = {
+				["rust-analyzer"] = {
+					checkOnSave = {
+						command = "clippy"
+					},
+					cargo = {
+						allFeatures = true,
+					}
+				}
+			}
+		})
 
 		lsp["clangd"].setup({
 			capabilities = caps,
@@ -43,7 +56,7 @@ return {
 						globals = { "vim" },
 					},
 					workspace = {
-						library ={
+						library = {
 							[vim.fn.expand("$VIMRUNTIME/lua")] = true,
 							[vim.fn.stdpath("config") .. "/lua"] = true,
 						},
@@ -52,5 +65,4 @@ return {
 			}
 		})
 	end
-	}
-
+}
