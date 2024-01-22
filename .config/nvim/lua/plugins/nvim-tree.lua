@@ -1,10 +1,9 @@
 return {
 	"nvim-tree/nvim-tree.lua",
-	dependencies = {
-		"nvim-tree/nvim-web-devicons",
-	},
+	-- {"nvim-tree/nvim-web-devicons"},
 	config = function()
 		local tree = require("nvim-tree");
+		-- require("nvim-web-devicons")
 		-- auto close Nvim-tree on q!
 		--
 		local function is_modified_buffer_open(buffers)

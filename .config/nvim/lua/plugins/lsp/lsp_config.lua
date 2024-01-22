@@ -26,6 +26,11 @@ return {
 			local hl = "DiagnosticSign" .. type
 			vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
 		end
+	
+		lsp["wgsl_analyzer"].setup({
+			capabilities = caps,
+			on_attach = on_attach,
+		})
 
 		lsp["rust_analyzer"].setup({
 			capabilities = caps,
@@ -38,7 +43,7 @@ return {
 				}
 			}
 		})
-
+		
 		lsp["clangd"].setup({
 			capabilities = caps,
 			on_attach = on_attach,

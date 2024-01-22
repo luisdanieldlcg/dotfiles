@@ -39,8 +39,8 @@ table.insert(keys, { key = "DownArrow", mods = "CTRL", action = ac.AdjustPaneSiz
 config.color_scheme = 'Catppuccin Mocha (Gogh)'
 
 config.font = wezterm.font {
---  family = 'mononoki Nerd Font',
-	family = 'Iosevka Term',
+ family = 'mononoki Nerd Font',
+	-- family = 'Iosevka Term',
 }
 config.exit_behavior = "Close"
 config.window_background_opacity = 1.0

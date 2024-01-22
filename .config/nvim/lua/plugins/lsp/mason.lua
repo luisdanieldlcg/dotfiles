@@ -20,7 +20,8 @@ return {
 			ensure_installed = {
 				"rust_analyzer",
 				"clangd",
-				"lua_ls"
+				"lua_ls",
+				"wgsl_analyzer",
 			},
 			automatic_installation = true,
 		})

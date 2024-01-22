@@ -1,0 +1,29 @@
+import = ["/home/daniel/dotfiles/.config/alacritty/catppuccin/catppuccin-macchiato.toml"]
+
+[cursor.style]
+shape = "Beam"
+
+[cursor.vi_mode_style]
+shape = "Beam"
+
+[font]
+size = 15
+
+[font.normal]
+# family = "Iosevka Term"
+family = "Mononoki Nerd Font"
+style = "regular"
+
+[[keyboard.bindings]]
+action = "SpawnNewInstance"
+key = "T"
+mods = "Alt"
+
+[[keyboard.bindings]]
+action = "None"
+key = "N"
+mods = "Command"
+
+[window.padding]
+x = 15
+y = 15
