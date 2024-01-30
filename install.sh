@@ -7,7 +7,6 @@ DOTFILES=$HOME/dotfiles/.config
 install() {
   
   find -H "$DOTFILES" -name 'link.path' | while read linkfile
-
   do
     cat "$linkfile" | while read line
     do
