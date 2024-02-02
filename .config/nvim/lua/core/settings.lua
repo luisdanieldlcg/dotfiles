@@ -1,5 +1,7 @@
 local opt = vim.opt;
 
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
 opt.number = true;
 opt.tabstop = 4;
 opt.shiftwidth = 4;

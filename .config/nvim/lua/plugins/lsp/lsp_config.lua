@@ -16,9 +16,13 @@ return {
 			keymap.set("n", "gD", vim.lsp.buf.declaration, opts);
 			keymap.set("n", "gr", "<cmd>Telescope lsp_references<CR>", opts);
 			keymap.set("n", "<leader>a", vim.lsp.buf.code_action, opts);
+			keymap.set("n", "<F2>", vim.lsp.buf.rename, opts);
 			vim.keymap.set('n', 'K', vim.lsp.buf.hover, opts);
 			vim.keymap.set('n', '<C-k>', vim.lsp.buf.signature_help, opts);
+			-- Setup autoformatting on buffer write
+			vim.cmd [[ autocmd BufWritePre <buffer> lua vim.lsp.buf.format() ]]
 		end
+
 		local caps = cmp.default_capabilities();
 		local signs = { Error = " ", Warn = " ", Hint = "󰠠 ", Info = " " }
 
@@ -26,7 +30,7 @@ return {
 			local hl = "DiagnosticSign" .. type
 			vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
 		end
-	
+
 		lsp["wgsl_analyzer"].setup({
 			capabilities = caps,
 			on_attach = on_attach,
@@ -43,7 +47,7 @@ return {
 				}
 			}
 		})
-		
+
 		lsp["clangd"].setup({
 			capabilities = caps,
 			on_attach = on_attach,
