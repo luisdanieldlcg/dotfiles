@@ -1,5 +1,6 @@
-theme = "catppuccin_macchiato"
-# theme = "base16_transparent"
+# theme = "catppuccin_macchiato"
+# theme = "ayu_evolve"
+theme = "gruvbox"
 
 [editor]
 lsp.display-inlay-hints = true
@@ -9,3 +10,4 @@ cursorline = true
 [editor.cursor-shape]
 insert = "bar"
 select = "underline"
+

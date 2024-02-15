@@ -17,8 +17,8 @@ return {
 			keymap.set("n", "gr", "<cmd>Telescope lsp_references<CR>", opts);
 			keymap.set("n", "<leader>a", vim.lsp.buf.code_action, opts);
 			keymap.set("n", "<F2>", vim.lsp.buf.rename, opts);
-			vim.keymap.set('n', 'K', vim.lsp.buf.hover, opts);
-			vim.keymap.set('n', '<C-k>', vim.lsp.buf.signature_help, opts);
+			keymap.set('n', 'K', vim.lsp.buf.hover, opts);
+			keymap.set('n', '<C-k>', vim.lsp.buf.signature_help, opts);
 			-- Setup autoformatting on buffer write
 			vim.cmd [[ autocmd BufWritePre <buffer> lua vim.lsp.buf.format() ]]
 		end
@@ -44,6 +44,9 @@ return {
 					checkOnSave = {
 						command = "clippy"
 					},
+					cargo = {
+						allFeatures = true,
+					}
 				}
 			}
 		})

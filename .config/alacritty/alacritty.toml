@@ -10,9 +10,10 @@ shape = "Beam"
 size = 15
 
 [font.normal]
-# family = "Iosevka Term"
-family = "Mononoki Nerd Font"
-style = "regular"
+family = "Iosevka Term"
+# family = "Mononoki Nerd Font"
+# style = "Regular"
+
 
 [[keyboard.bindings]]
 action = "SpawnNewInstance"
