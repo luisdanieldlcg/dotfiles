@@ -1,4 +1,6 @@
-import = ["/home/daniel/dotfiles/.config/alacritty/catppuccin/catppuccin-macchiato.toml"]
+import = [
+    "~/dotfiles/.config/alacritty/themes/gruvbox_dark.toml"
+]
 
 [cursor.style]
 shape = "Beam"
@@ -10,7 +12,7 @@ shape = "Beam"
 size = 15
 
 [font.normal]
-family = "Iosevka Term"
+family = "Iosevka"
 # family = "Mononoki Nerd Font"
 # style = "Regular"
 

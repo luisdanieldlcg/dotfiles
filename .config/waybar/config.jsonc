@@ -1,0 +1,77 @@
+{
+	"layer": "top",	
+	"position": "top",
+  "height": 27,
+  "modules-left": ["hyprland/workspaces", "hyprland/window"],
+  "modules-center": [],
+  "modules-right": ["memory", "cpu", "hyprland/language", "clock"],
+  // "modules-right": ["temperature", "pulseaudio",  "clock", "tray"],
+
+	"hyprland/workspaces": {
+    "format": "{icon}",
+    "on-scroll-up": "hyprctl dispatch workspace e+1",
+    "on-scroll-down": "hyprctl dispatch workspace e-1",
+		"persistent-workspaces": {
+				"1": {},
+				"2": {},
+				"3": {},
+				"4": {},
+				"5": {},
+				"6": {},
+		}
+	},
+	"hyprland/window": {
+    	"format": "{}",
+    	"max-length": 50,
+	},
+
+  "hyprland/language": {
+      "format": "|LANG: {}|",
+  },
+	"custom/scratch": {
+   		"interval": 3,
+   		"exec": "swaymsg -t get_tree | jq 'recurse(.nodes[]) | first(select(.name==\"__i3_scratch\")) | .floating_nodes | length | select(. >= 0)'",
+   		"format": "^{}", 
+   		"on-click": "swaymsg 'scratchpad show'",
+   		"on-click-right": "swaymsg 'move scratchpad'"
+    },
+    "tray": {
+        "icon-size": 18,
+        "spacing": 15
+    },
+    "memory": {
+      "interval": 30,
+      "format": "|MEM: {used:0.1f}G/{total:0.1f}G| "
+    },
+    "cpu": {
+      "format": "|CPU: {}%| "
+    },
+    "clock": {
+        // chrono spec: https://fmt.dev/latest/syntax.html#chrono-specs
+        "format": "{:%a %D %H:%M}",
+        "interval": 60,
+	  },
+  
+    "temperature": {
+		"thermal-zone": 0,
+		"format": "{icon} {temperatureC}°C",
+		"format-icons":[""],
+		"interval": 30
+	},
+	"backlight": {
+    	"device": "intel_backlight",
+    	"format": "{icon}  {percent}%  ",
+    	"format-icons": ["","","",""],
+    	"interval": 60
+	},
+    "pulseaudio": {
+        "format": "{icon}  {volume}%  ",
+        "format-bluetooth": "  {volume}%  ",
+        "format-muted":"婢  Mute  ",
+        "interval": 60,
+        "format-icons": {
+        "default": [""]
+		},
+       "on-click": "blueman-manager"    
+	}
+}
