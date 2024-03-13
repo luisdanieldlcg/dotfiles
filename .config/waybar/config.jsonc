@@ -4,9 +4,7 @@
   "height": 27,
   "modules-left": ["hyprland/workspaces", "hyprland/window"],
   "modules-center": [],
-  "modules-right": ["memory", "cpu", "hyprland/language", "clock"],
-  // "modules-right": ["temperature", "pulseaudio",  "clock", "tray"],
-
+  "modules-right": ["memory", "cpu", "hyprland/language", "pulseaudio", "clock"],
 	"hyprland/workspaces": {
     "format": "{icon}",
     "on-scroll-up": "hyprctl dispatch workspace e+1",
@@ -24,7 +22,6 @@
     	"format": "{}",
     	"max-length": 50,
 	},
-
   "hyprland/language": {
       "format": "|LANG: {}|",
   },
@@ -34,10 +31,6 @@
    		"format": "^{}", 
    		"on-click": "swaymsg 'scratchpad show'",
    		"on-click-right": "swaymsg 'move scratchpad'"
-    },
-    "tray": {
-        "icon-size": 18,
-        "spacing": 15
     },
     "memory": {
       "interval": 30,
@@ -51,27 +44,13 @@
         "format": "{:%a %D %H:%M}",
         "interval": 60,
 	  },
-  
-    "temperature": {
-		"thermal-zone": 0,
-		"format": "{icon} {temperatureC}°C",
-		"format-icons":[""],
-		"interval": 30
-	},
-	"backlight": {
-    	"device": "intel_backlight",
-    	"format": "{icon}  {percent}%  ",
-    	"format-icons": ["","","",""],
-    	"interval": 60
-	},
     "pulseaudio": {
-        "format": "{icon}  {volume}%  ",
-        "format-bluetooth": "  {volume}%  ",
+        "format": " {icon} {volume}%",
         "format-muted":"婢  Mute  ",
         "interval": 60,
         "format-icons": {
         "default": [""]
 		},
-       "on-click": "blueman-manager"    
+    "on-click": "pavucontrol"   
 	}
 }
