@@ -1,86 +1,133 @@
-
 * {
-    font-family: "Mononoki";
-		/* font-family: "Mononoki"; */ 
-    font-size: 16px;
+  border: none;
+  border-radius: 0;
+  min-height: 0;
+  font-family: Iosevka;
+  font-size: 15px;
 }
 
-
-window#waybar { 
-    background-color: #069; 
-		border: none;
-    color: #ffffff;    
+window#waybar {
+  background-color: #1e1e2e;
+  transition-property: background-color;
+  transition-duration: 0.5s;
 }
 
-
-.modules-left {
-	background-color: #323232;
-	padding: 0px 0px 0px 0px;
+window#waybar.hidden {
+  opacity: 0.5;
 }
 
-
-.modules-right {
-	background-color: #323232;
-	padding: 0px 5px 0px 5px;
+#workspaces {
+  background-color: transparent;
 }
-
-
-#custom-scratch {
-	background-color: #323232;
-	color: #b8b8b8;
-	padding: 0px 9px 0px 9px;
-}
-
-
-#workspaces button.active {
-	color: white;
-	background-color: #069;
-	border-radius: 0;
-}
-
 
 #workspaces button {
-	padding: 0px 11px 0px 11px; 
- 	min-width: 1px;
-	color: #888888;
-	border-radius: 0;
+  all: initial; /* Remove GTK theme values (waybar #1351) */
+  min-width: 0; /* Fix weird spacing in materia (waybar #450) */
+  box-shadow: inset 0 -3px transparent; /* Use box-shadow instead of border so the text isn't offset */
+  padding: 6px 14px;
+  margin: 6px;
+  border-radius: 20%;
+  background-color: #313244;
+  color: #cdd6f4;
 }
 
-
-#workspaces button.focused { 
-	padding: 0px 11px 0px 11px; 
-	background-color: #285577;
-	color: #ffffff;
-	border-radius: 0;
-
+#workspaces button.active {
+  color: #1e1e2e;
+  background-color: #8aadf4;
 }
 
-
-#window { 
-	 background-color: #069;
-	 color: #ffffff;
-   padding: 0px 5px 0px 5px;
+#workspaces button:hover {
+ box-shadow: inherit;
+ text-shadow: inherit;
+ color: #1e1e2e;
+ background-color: #cdd6f4;
 }
 
+#workspaces button.urgent {
+  background-color: #f38ba8;
+}
+
+#memory,
+#custom-power,
+#battery,
+#backlight,
+#pulseaudio,
+#network,
+#clock,
+#tray {
+  border-radius: 8px;
+  margin: 6px 3px;
+  padding: 6px 20px;
+  background-color: #1e1e2e;
+  color: #181825;
+}
+
+#custom-power {
+  color: #e64553;
+}
 
 #window {
-	 color: #ffffff;
-	 background-color: #069;
-    padding: 0px 10px 0px 10px;
+  margin: 6px 3px;
+  padding: 6px 16px;
+  background-color: #313244;
+  border-radius: 8px;
+  color: #cdd6f4;
+
 }
 
-
-window#waybar.empty #window {
-	background-color: transparent;
-	color: transparent;
+#custom-power {
+  margin-right: 6px;
 }
 
-
-window#waybar.empty {
-	background-color: #069;
+#custom-logo {
+  padding-right: 7px;
+  padding-left: 7px;
+  margin-left: 5px;
+  font-size: 20px;
+  border-radius: 8px 0px 0px 8px;
+  color: #8caaee;
 }
-    
+
+#memory {
+  background-color: #fab387;
+}
+#battery {
+  background-color: #f38ba8;
+}
+@keyframes blink {
+  to {
+    background-color: #f38ba8;
+    color: #181825;
+  }
+}
+
+#backlight {
+  background-color: #fab387;
+}
+
+#pulseaudio {
+  background-color: #f9e2af;
+}
+
+#network {
+  background-color: #94e2d5;
+  padding-right: 17px;
+}
 
 #clock {
-	margin: 0px 15px 0px 15px;
+  font-family: Iosevka;
+  background-color: #8aadf4;
+}
+
+
+
+tooltip {
+border-radius: 8px;
+padding: 15px;
+background-color: #131822;
+}
+
+tooltip label {
+padding: 5px;
+background-color: #131822;
 }

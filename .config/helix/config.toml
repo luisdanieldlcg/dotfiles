@@ -1,6 +1,6 @@
-# theme = "catppuccin_macchiato"
+theme = "catppuccin_macchiato"
 # theme = "ayu_evolve"
-theme = "gruvbox"
+# theme = "gruvbox"
 
 [editor]
 lsp.display-inlay-hints = true
