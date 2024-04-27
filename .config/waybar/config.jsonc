@@ -99,13 +99,11 @@
     "custom/logo": {
         "format": "  ",
         "tooltip": false,
-        // "on-click": "~/.config/rofi/launchers/misc/launcher.sh &"
     },
     "custom/power": {
         "format": " ",
         "interval": "once",
         "tooltip": false,
         "on-click": "wlogout -c 5 -r 5 -p layer-shell"
-        // "on-click": "~/.config/rofi/powermenu/type-2/powermenu.sh &"
     }
 }
