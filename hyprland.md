@@ -1,10 +1,12 @@
-
 # Pacman
 ```
-  sudo pacman -S xdg-users-dirs xdg-utils otf-font-awesome gh ttf-firacode-nerd wlogout
+  sudo pacman -S helix alacritty xdg-users-dirs xdg-utils otf-font-awesome gh ttf-firacode-nerd grim slurp dunst ttf-ibmplex-mono-nerd noto-fonts pamixer
 ```
 
 # Aur
+Install Paru `https://github.com/Morganamilo/paru`
+
+Then:
 ```
-  paru -S wlogout ttf-iosevka
+  paru -S wlogout ttf-iosevka rofi-wayland
 ```
