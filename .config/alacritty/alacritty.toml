@@ -1,20 +1,21 @@
 import = [
     # "~/dotfiles/.config/alacritty/themes/gruvbox_dark.toml"
-    "~/dotfiles/.config/alacritty/themes/catppuccin_macchiato.toml"
+    # "~/dotfiles/.config/alacritty/themes/catppuccin_macchiato.toml"
+    "~/dotfiles/.config/alacritty/themes/catppuccin_mocha.toml"
 ]
 
 [cursor.style]
-shape = "Beam"
+shape = "Block"
 
 [cursor.vi_mode_style]
-shape = "Beam"
+shape = "Block"
 
 [font]
 size = 15
 
 [font.normal]
-family = "BlexMono Nerd Font"
-# family = "Iosevka"
+# family = "Noto Sans Mono"
+family = "Iosevka"
 # family = "Mononoki Nerd Font"
 # style = "Regular"
 
