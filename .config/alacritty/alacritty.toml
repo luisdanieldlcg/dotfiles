@@ -15,8 +15,8 @@ size = 15
 
 [font.normal]
 # family = "Noto Sans Mono"
-# family = "Iosevka"
-family = "Mononoki"
+family = "Iosevka"
+# family = "Mononoki"
 # style = "Regular"
 
 
