@@ -1,41 +1,155 @@
 * {
   border: none;
-  font-family: Noto Sans Mono;
-  font-size: 14px;
+  border-radius: 0px;
+  font-family: Iosevka;
+  font-size: 15px;
+  min-height: 0;
 }
 
 window#waybar {
-  background-color: #222222;
+  background: #1d2021;
+  color: #ebdbb2;
+}
+
+tooltip {
+  background: #282828;
+  border-radius: 10px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #1d2021;
+}
+
+#workspaces {
+  background: #32302f;
+  padding: 0 0.2em;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  border-radius: 6px;
+  border: 1px solid #5e5950; 
 }
 
 #workspaces button {
-  all: initial;
-  /* Remove GTK theme values (waybar #1351) */
-  min-width: 0;
-  color: #dfdfdf;
-  margin: 0 10px;
+  color: #615c4e;
+  border-radius: 6px;
 }
 
 #workspaces button.active {
-  color: #ffaa00;
+  color: #e8e0ca;
+  background: #5e5950;
 }
 
-#workspaces button:hover {
-  color: #fba922;
-  font-weight: bold;
+#workspaces button.focused {
+  color: #ebdbb2;
+  background: #262525;
 }
 
 #workspaces button.urgent {
-  background-color: #f38ba8;
+  color: #1d2021;
+  background: #fb4934;
+}
+
+
+#custom-power,
+#date,
+#pulseaudio,
+#network,
+#clock{
+  background: #32302f;
+  padding: 0 0.5em;
+  margin-right: 4px;
+  margin-left: 4px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  border-radius: 6px;
+  border: 1px solid #5e5950; 
+}
+
+#network {
+  color: #ebdbb2;
+  margin-right: 6px;
+}
+
+#pulseaudio {
+  margin-right: 6px;
+  color: #ebdbb2;
+}
+
+#custom-power {
+  color: #fb4934;
+  background: #32302f;
 }
 
 #clock {
-  margin: 6px 3px;
-  padding: 6px 14px;
+  color: #ebdbb2;
+  margin-right: 6px;
 }
 
-#clock,
-#window,
-#language {
-  color: #dfdfdf;
+#taskbar {
+  background: #1d2021;
+  padding: 0 0.6em;
+  margin-right: 10px;
+  margin-left: 4px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  border-radius: 6px;
+  color: #ebdbb2;
 }
+
+#taskbar button {
+  border-radius: 6px;
+  background: #32302f;
+  color: #a89984;
+  margin-right: 6px;
+}
+
+#taskbar button.minimized {
+  border-radius: 6px;
+  background: #32302f;
+  color: #a89984;
+}
+
+#taskbar button.active {
+  border-radius: 6px;
+  background: #4e635b;
+  color: #ebdbb2;
+}
+
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 30%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes gradient_f {
+  0% {
+    background-position: 0% 200%;
+  }
+
+  50% {
+    background-position: 200% 0%;
+  }
+
+  100% {
+    background-position: 400% 200%;
+  }
+}
+
+@keyframes gradient_f_nh {
+  0% {
+    background-position: 0% 200%;
+  }
+
+  100% {
+    background-position: 200% 200%;
+  }
+}
+
