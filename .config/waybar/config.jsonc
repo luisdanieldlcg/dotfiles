@@ -5,7 +5,7 @@
   
   "modules-left":   ["hyprland/workspaces"],
   "modules-center": ["hyprland/window"],
-  "modules-right":  ["clock", "pulseaudio", "network", "custom/power"],
+  "modules-right":  ["hyprland/language", "pulseaudio", "network", "clock", "custom/power"],
   "wlr/taskbar": {
 	"format": "{icon} {app_id}",
 	"icon-size": 14,
@@ -60,13 +60,13 @@
      	"warning": 85
     },
     "tooltip": false,
-    "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
-    "on-click-right": "pavucontrol"
+    "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+    // "on-click-right": "pavucontrol"
   },
 
   "custom/power": {
     "format": " ⏻ ",
-    "on-click": "poweroff"
+    "on-click": "~/dotfiles/.config/waybar/poweroff.sh"
   }
 }
 
