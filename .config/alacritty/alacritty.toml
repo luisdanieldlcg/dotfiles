@@ -11,13 +11,13 @@ shape = "Block"
 shape = "Block"
 
 [font]
-size = 13
+size = 15
 
 [font.normal]
 # family = "Noto Sans Mono"
-family = "Iosevka"
-# family = "Mononoki"
-# style = "Regular"
+family = "IosevkaTerm Nerd Font"
+# family = "Mononoki Nerd Font"
+style = "Regular"
 
 
 [[keyboard.bindings]]
