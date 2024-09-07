@@ -12,5 +12,12 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-require("lazy").setup("plugins", {})
-
+local plugins = {
+	{
+		import = "plugins.lsp"  
+	},
+    {
+		import = "plugins",
+	}, -- Automatically import plugins from plugins/ folder,
+}
+require("lazy").setup(plugins,  {})
