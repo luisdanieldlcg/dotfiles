@@ -4,11 +4,14 @@ return {
 	dependencies = {
 		"hrsh7th/cmp-nvim-lsp",
 	},
+    opts = {
+        inlay_hints = { enabled = true}
+    },
 	config = function()
 		local lsp = require("lspconfig")
 		local keymap = vim.keymap;
 
-		local on_attach = function(_, buf)
+ 		local on_attach = function(_, buf)
 			local opts = { noremap = true, silent = true, buffer = buf }
 			keymap.set("n", "gd", "<cmd>Telescope lsp_definitions<CR>", opts);
 			keymap.set("n", "gr", "<cmd>Telescope lsp_references<CR>", opts);
@@ -17,6 +20,8 @@ return {
 			keymap.set("n", "<leader>r", vim.lsp.buf.rename, opts);
 			keymap.set('n', '<leader>k', vim.lsp.buf.hover, opts);
 			keymap.set('n', '<C-p>', vim.lsp.buf.signature_help, opts);
+
+            vim.lsp.inlay_hint.enable(true)
 			-- Setup autoformatting on buffer write
 			vim.cmd [[ autocmd BufWritePre <buffer> lua vim.lsp.buf.format() ]]
 		end
