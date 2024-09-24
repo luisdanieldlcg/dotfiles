@@ -33,20 +33,21 @@ table.insert(keys, { key = "D", mods = defaultMod, action = ac.AdjustPaneSize { 
 table.insert(keys, { key = "A", mods = defaultMod, action = ac.AdjustPaneSize { 'Left', 1 } })
 table.insert(keys, { key = "W", mods = defaultMod, action = ac.AdjustPaneSize { 'Up', 1 } })
 table.insert(keys, { key = "S", mods = defaultMod, action = ac.AdjustPaneSize { 'Down', 1 } })
+config.window_close_confirmation = 'NeverPrompt'
 -- This is where you actually apply your config choices
 -- For example, changing the color scheme:
 -- config.disable_default_key_bindings = true
 -- config.color_scheme = 'Gruvbox Dark (Gogh)'
 config.color_scheme = 'Catppuccin Mocha (Gogh)'
-
 config.font = wezterm.font {
+    family = 'JetBrains Mono'
 	-- family = 'mononoki Nerd Font',
-	family = 'Iosevka',
+	-- family = 'Iosevka',
 }
 config.exit_behavior = "Close"
 config.window_background_opacity = 1.0
 config.font_size = 15
-config.default_cursor_style = 'SteadyBar'
+config.default_cursor_style = 'SteadyBlock'
 config.keys = keys
 -- and finally, return the configuration to wezterm
 return config

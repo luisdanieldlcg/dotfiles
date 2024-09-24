@@ -1,7 +1,9 @@
 return {
-    "sainnhe/gruvbox-material",
+    -- "sainnhe/gruvbox-material",
+    -- "ellisonleao/gruvbox.nvim"
+     "catppuccin/nvim",
     priority = 1000,
     config = function()
-        vim.cmd([[colorscheme gruvbox-material]])
+        vim.cmd([[colorscheme catppuccin]])
     end
 }
