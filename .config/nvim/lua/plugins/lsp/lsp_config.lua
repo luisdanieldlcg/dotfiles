@@ -23,7 +23,7 @@ return {
 
             vim.lsp.inlay_hint.enable(true)
 			-- Setup autoformatting on buffer write
-			vim.cmd [[ autocmd BufWritePre <buffer> lua vim.lsp.buf.format() ]]
+			-- vim.cmd [[ autocmd BufWritePre <buffer> lua vim.lsp.buf.format() ]]
 		end
 
 		local caps = require("cmp_nvim_lsp").default_capabilities();
