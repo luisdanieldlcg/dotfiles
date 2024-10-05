@@ -22,6 +22,7 @@ return {
 			keymap.set('n', '<C-p>', vim.lsp.buf.signature_help, opts);
 
             vim.lsp.inlay_hint.enable(true)
+            vim.api.nvim_set_hl(0, "LspInlayHint", { fg = "#9DA9A0" })
 			-- Setup autoformatting on buffer write
 			-- vim.cmd [[ autocmd BufWritePre <buffer> lua vim.lsp.buf.format() ]]
 		end

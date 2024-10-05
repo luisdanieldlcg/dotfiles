@@ -11,12 +11,12 @@ shape = "Block"
 shape = "Block"
 
 [font]
-size = 14
+size = 15
 
 [font.normal]
 # family = "Noto Sans Mono"
-# family = "Iosevka"
-family = "JetBrains Mono"
+family = "IosevkaTerm"
+# family = "JetBrains Mono"
 # family = "mononoki nerd font"
 style = "Regular"
 

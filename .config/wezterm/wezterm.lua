@@ -40,13 +40,13 @@ config.window_close_confirmation = 'NeverPrompt'
 -- config.color_scheme = 'Gruvbox Dark (Gogh)'
 config.color_scheme = 'Catppuccin Mocha (Gogh)'
 config.font = wezterm.font {
-    family = 'JetBrains Mono'
+    -- family = 'JetBrains Mono'
 	-- family = 'mononoki Nerd Font',
-	-- family = 'Iosevka',
+	family = 'IosevkaTerm',
 }
 config.exit_behavior = "Close"
 config.window_background_opacity = 1.0
-config.font_size = 15
+config.font_size = 14
 config.default_cursor_style = 'SteadyBlock'
 config.keys = keys
 -- and finally, return the configuration to wezterm

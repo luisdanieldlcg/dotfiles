@@ -11,4 +11,4 @@ opt.smartindent = true
 
 opt.termguicolors = true
 opt.background = "dark"
-
+opt.cursorline = true

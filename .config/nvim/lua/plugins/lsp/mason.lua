@@ -21,7 +21,7 @@ return {
 				"rust_analyzer",
 				"lua_ls",
 				"wgsl_analyzer",
-                "tsserver",
+                -- "tsserver",
 			},
 			automatic_installation = true,
 		})
