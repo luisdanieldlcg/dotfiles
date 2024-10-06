@@ -15,7 +15,8 @@ size = 15
 
 [font.normal]
 # family = "Noto Sans Mono"
-family = "IosevkaTerm"
+# family = "IosevkaTerm"
+family = "Fira Code"
 # family = "JetBrains Mono"
 # family = "mononoki nerd font"
 style = "Regular"
