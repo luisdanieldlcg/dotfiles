@@ -46,7 +46,7 @@ config.font = wezterm.font_with_fallback({
 config.window_decorations = "RESIZE"
 config.exit_behavior = "Close"
 config.window_background_opacity = 0.9
-config.font_size = 13
+config.font_size = 12
 config.default_cursor_style = 'SteadyBlock'
 config.keys = keys
 
