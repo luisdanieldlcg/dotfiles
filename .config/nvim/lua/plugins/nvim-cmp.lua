@@ -22,7 +22,11 @@ return {
                 { name = "buffer" },
                 { name = "path" },
                 { name = "nvim_lsp" },
-            })
+            }),
+            -- nvim-highlight-colors on completion
+            formatting = {
+                format = require("nvim-highlight-colors").format
+            }
 		})
 	end
 }

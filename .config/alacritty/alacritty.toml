@@ -1,7 +1,7 @@
 import = [
-    "~/dotfiles/.config/alacritty/themes/gruvbox_dark.toml"
+    # "~/dotfiles/.config/alacritty/themes/gruvbox_dark.toml"
     # "~/dotfiles/.config/alacritty/themes/catppuccin_macchiato.toml"
-    # "~/dotfiles/.config/alacritty/themes/catppuccin_mocha.toml"
+    "~/dotfiles/.config/alacritty/themes/catppuccin_mocha.toml"
 ]
 
 [cursor.style]
@@ -31,6 +31,9 @@ mods = "Alt"
 action = "None"
 key = "N"
 mods = "Command"
+
+[window]
+opacity = 0.9
 
 [window.padding]
 x = 15
