@@ -1,32 +1,33 @@
 #!/usr/bin/env bash
 
 # Dependencies: bemenu 
-# Theme: Gruvbox 
 
-options="󰜺 Cancel\n󰗽 Logout\n󰑓 Reboot\n󰐥 Shutdown"
+bg='#181718e6'
+fg="" # default color
+fg_active='#ffffff'
+
+options="󰜺 Cancel\n󰑓 Reboot\n󰐥 Shutdown"
 selected=$(echo -e $options \
 	| bemenu \
 	-i \
 	--prefix '' \
 	--prompt 'Power  ' \
 	--list 7 \
-	--fn 'Iosevka' \
-	--fb "#282828" \
-	--ff "#ebdbb2" \
-	--nb "#282828" \
-	--nf "#ebdbb2" \
-	--tb "#282828" \
-	--hb "#282828" \
-	--tf "#fb4934" \
-	--hf "#fabd2f" \
-	--nf "#ebdbb2" \
-	--af "#ebdbb2" \
-	--ab "#282828")
+	--fn 'Noto Sans' \
+	--fb "$bg" \
+	--ff "$fg" \
+	--nb "$bg" \
+	--nf "$fg" \
+	--tb "$bg" \
+	--hb "$bg" \
+	--tf "$fg_active" \
+	--hf "$fg_active" \
+	--nf "$fg" \
+	--af "$fg" \
+	--ab "$bg")
 
 if [[ "$selected" == *"Cancel"* ]]; then
 	:
-elif [[ "$selected" == *"Logout"* ]]; then
-	hyprctl dispatch exit
 elif [[ "$selected" == *"Shutdown"* ]]; then
 	systemctl poweroff
 elif [[ "$selected" == *"Reboot"* ]]; then

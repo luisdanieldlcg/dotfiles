@@ -1,7 +1,7 @@
 * {
   border: none;
-  font-family: Cantarell;
-  font-size: 15px;
+  font-family: Noto Sans;
+  font-size: 14px;
   min-height: 0;
 }
 
@@ -31,11 +31,13 @@ tooltip {
   margin-bottom: 4px;
 } 
 
+#workspaces button {
+    color: grey;
+}
+
 #workspaces button.active {
-  color: @active;
-  background: @button_bg;
+  color: white;
   border-radius: 8px;
-  padding: 0 1.2rem;
 }
 
 #workspaces button.urgent {
@@ -48,9 +50,8 @@ tooltip {
 #network,
 #language,
 #clock{
-    font-weight: 400;
+  font-weight: 400;
   border-radius: 12px;
-  /* background: @bg; */
   padding: 0.4rem 0.5em;
   margin-right: 4px;
   margin-left: 4px;
@@ -60,6 +61,7 @@ tooltip {
 
 #custom-power {
   color: #fb4934;
+  margin-top: 8px;
 }
 
 #clock {

@@ -50,8 +50,8 @@
      	"warning": 85
     },
     "tooltip": false,
-    "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
-    // "on-click-right": "pavucontrol"
+    "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+    "on-click-right": "pavucontrol"
   },
 
   "custom/power": {
