@@ -21,6 +21,9 @@ return {
 			keymap.set('n', '<leader>k', vim.lsp.buf.hover, opts);
 			keymap.set('n', '<C-p>', vim.lsp.buf.signature_help, opts);
 
+            keymap.set("n", "]g", vim.diagnostic.goto_next)
+            keymap.set("n", "[g", vim.diagnostic.goto_prev)
+
             vim.lsp.inlay_hint.enable(true)
             vim.api.nvim_set_hl(0, "LspInlayHint", { fg = "#9DA9A0" })
 			-- Setup autoformatting on buffer write
