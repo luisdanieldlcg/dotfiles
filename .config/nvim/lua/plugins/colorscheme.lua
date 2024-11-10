@@ -1,10 +1,10 @@
 return {
      -- "catppuccin/nvim",
   -- "neanias/everforest-nvim",
-   "shatur/neovim-ayu",
+   -- "shatur/neovim-ayu",
+    "sainnhe/gruvbox-material",
     priority = 1000,
     config = function()
-        vim.cmd([[colorscheme ayu-mirage]])
-        -- vim.cmd([[colorscheme catppuccin-mocha]])
+        vim.cmd([[colorscheme gruvbox-material]])
     end
 }
