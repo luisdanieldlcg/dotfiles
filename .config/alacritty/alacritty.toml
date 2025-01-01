@@ -1,3 +1,4 @@
+[general]
 import = [
     # "~/dotfiles/.config/alacritty/themes/gruvbox_dark.toml"
     # "~/dotfiles/.config/alacritty/themes/catppuccin_macchiato.toml"
