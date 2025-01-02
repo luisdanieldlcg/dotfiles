@@ -1,8 +1,8 @@
 [general]
 import = [
-    # "~/dotfiles/.config/alacritty/themes/gruvbox_dark.toml"
+    "~/dotfiles/.config/alacritty/themes/gruvbox_dark.toml"
     # "~/dotfiles/.config/alacritty/themes/catppuccin_macchiato.toml"
-    "~/dotfiles/.config/alacritty/themes/catppuccin_mocha.toml"
+    # "~/dotfiles/.config/alacritty/themes/catppuccin_mocha.toml"
 ]
 
 [cursor.style]
@@ -12,14 +12,10 @@ shape = "Block"
 shape = "Block"
 
 [font]
-size = 14
+size = 13
 
 [font.normal]
-# family = "Noto Sans Mono"
-# family = "IosevkaTerm"
 family = "Fira Code"
-# family = "JetBrains Mono"
-# family = "mononoki nerd font"
 style = "Regular"
 
 
@@ -34,7 +30,7 @@ key = "N"
 mods = "Command"
 
 [window]
-opacity = 0.9
+opacity = 1.0
 
 [window.padding]
 x = 15

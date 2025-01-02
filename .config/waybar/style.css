@@ -1,11 +1,11 @@
 * {
   border: none;
-  font-family: Noto Sans;
+  font-family: JetBrains Mono;
   font-size: 14px;
   min-height: 0;
 }
 
-@define-color bg rgba(24, 23, 24, 0.9);
+@define-color bg rgba(24, 23, 24, 1.0);
 @define-color button_bg #dee2e6;
 @define-color active #181C14;
 
@@ -62,6 +62,6 @@ tooltip {
 #custom-power {
   color: #fb4934;
   margin-right: 12px;
-  margin-top: 8px;
+  margin-top: 3px;
 }
 
