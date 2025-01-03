@@ -46,14 +46,5 @@ return {
             capabilities = caps,
             on_attach = on_attach,
         })
-
-       lsp["omnisharp"].setup({
-            capabilities = caps,
-            on_attach = on_attach,
-        })
-       lsp["csharp_ls"].setup({
-            capabilities = caps,
-            on_attach = on_attach,
-        })
 	end
 }
