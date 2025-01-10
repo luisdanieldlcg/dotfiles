@@ -7,7 +7,8 @@ return {
         conform.setup({
             formatters_by_ft = {
                 javascript = { "prettier" },
-                typescript = { "prettier" }
+                typescript = { "prettier" },
+                dart = { "dart_format" },
             },
             format_on_save = {
                 lsp_fallback = true,

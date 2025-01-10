@@ -1,8 +1,6 @@
 [general]
 import = [
-    "~/dotfiles/.config/alacritty/themes/gruvbox_dark.toml"
-    # "~/dotfiles/.config/alacritty/themes/catppuccin_macchiato.toml"
-    # "~/dotfiles/.config/alacritty/themes/catppuccin_mocha.toml"
+    "~/dotfiles/.config/alacritty/themes/gruvbox_material.toml"
 ]
 
 [cursor.style]
@@ -12,7 +10,7 @@ shape = "Block"
 shape = "Block"
 
 [font]
-size = 13
+size = 12
 
 [font.normal]
 family = "Fira Code"

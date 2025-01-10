@@ -5,7 +5,12 @@ return {
 		"hrsh7th/cmp-nvim-lsp",
 	},
     opts = {
-        inlay_hints = { enabled = true}
+        -- inlay_hints = { enabled = true },
+        servers = {
+            dartls = {
+                cmd = { "dart", "language-server", "--protocol=lsp" }
+            }
+        }
     },
 	config = function()
 		local lsp = require("lspconfig")
@@ -24,8 +29,8 @@ return {
             keymap.set("n", "]g", vim.diagnostic.goto_next)
             keymap.set("n", "[g", vim.diagnostic.goto_prev)
 
-            vim.lsp.inlay_hint.enable(true)
-            vim.api.nvim_set_hl(0, "LspInlayHint", { fg = "#9DA9A0" })
+            -- vim.lsp.inlay_hint.enable(true)
+            -- vim.api.nvim_set_hl(0, "LspInlayHint", { fg = "#9DA9A0" })
 			-- Setup autoformatting on buffer write
 			-- vim.cmd [[ autocmd BufWritePre <buffer> lua vim.lsp.buf.format() ]]
 		end
@@ -43,6 +48,11 @@ return {
 		})
 
         lsp["ts_ls"].setup({
+            capabilities = caps,
+            on_attach = on_attach,
+        })
+
+        lsp["dartls"].setup({
             capabilities = caps,
             on_attach = on_attach,
         })
