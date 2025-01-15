@@ -10,6 +10,7 @@ abbr gs git status
 abbr gc git commit -am
 abbr gcl git clone
 abbr gck git checkout
+abbr gp git push
 
 if command -v eza > /dev/null
 	abbr l 'eza'
@@ -27,11 +28,13 @@ end
 if command -v fvm > /dev/null 
     abbr f 'fvm flutter'
     abbr fr 'fvm flutter run'
+    abbr frdev 'fvm flutter run --flavor dev --target lib/main_dev.dart'
     abbr fc 'fvm flutter clean'
     abbr fpg 'fvm flutter pub get'
 else
     abbr f  flutter
     abbr fr flutter run
+    abbr frdev 'flutter run --flavor dev --target lib/main_dev.dart'
     abbr fc 'flutter clean'
     abbr fpg flutter pub get
 end
