@@ -51,7 +51,12 @@ function fish_prompt
 	set_color brwhite
     echo -n @
 	set_color yellow
-	echo -n (hostnamectl hostname)
+    if command -v hostnamectl > /dev/null
+        echo -n (hostnamectl hostname)
+    # hostnamectl does not exists on macos
+    else if command -v hostname > /dev/null
+        echo -n (hostname)
+    end
 	if [ $PWD != $HOME ]
 		set_color brblack
 		echo -n ':'

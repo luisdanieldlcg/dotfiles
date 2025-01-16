@@ -16,19 +16,32 @@ local flutter = {
     pid_file = "/tmp/flutter.pid"
 }
 
+
+-- Create a function to open or create a Flutter output buffer
+local function get_flutter_buffer()
+    local buf = vim.fn.bufnr('Flutter Output')
+    if buf == -1 then
+        buf = vim.api.nvim_create_buf(false, true)
+        vim.api.nvim_buf_set_name(buf, 'Flutter Output')
+    end
+    return buf
+end
+
+-- Modify the on_flutter_event function
 local function on_flutter_event(_, data, event)
     if data then
         vim.schedule(function()
+            local buf = get_flutter_buffer()
             if event == 'stdout' then
                 for _, line in ipairs(data) do
                     if line ~= "" then
-                        print("Flutter: " .. line)
+                        vim.api.nvim_buf_set_lines(buf, -1, -1, false, {"Flutter: " .. line})
                     end
                 end
             elseif event == 'stderr' then
                 for _, line in ipairs(data) do
                     if line ~= "" then
-                        vim.notify("Flutter error: " .. line, vim.log.levels.ERROR)
+                        vim.api.nvim_buf_set_lines(buf, -1, -1, false, {"Flutter error: " .. line})
                     end
                 end
             end
