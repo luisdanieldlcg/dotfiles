@@ -1,6 +1,7 @@
 [general]
 import = [
-    "~/dotfiles/.config/alacritty/themes/gruvbox_material.toml"
+    "~/dotfiles/.config/alacritty/themes/kanagawa_dragon.toml"
+    # "~/dotfiles/.config/alacritty/themes/gruvbox_material.toml"
 ]
 
 [cursor.style]
@@ -10,17 +11,12 @@ shape = "Block"
 shape = "Block"
 
 [font]
-size = 13
+size = 14
 
 [font.normal]
-family = "Fira Code"
-style = "Regular"
-
-
-[[keyboard.bindings]]
-action = "SpawnNewInstance"
-key = "T"
-mods = "Alt"
+# family = "Fira Code"
+# family = "Mononoki Nerd Font"
+family = "Iosevka"
 
 [[keyboard.bindings]]
 action = "None"

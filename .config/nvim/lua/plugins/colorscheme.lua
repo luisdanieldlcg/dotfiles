@@ -1,10 +1,7 @@
 return {
-     -- "catppuccin/nvim",
-  -- "neanias/everforest-nvim",
-   -- "shatur/neovim-ayu",
-    "sainnhe/gruvbox-material",
+    "rebelot/kanagawa.nvim",
     priority = 1000,
     config = function()
-        vim.cmd([[colorscheme gruvbox-material]])
+        vim.cmd([[colorscheme kanagawa-dragon]])
     end
 }

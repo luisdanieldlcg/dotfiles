@@ -8,5 +8,6 @@ return {
         vim.keymap.set("n", "<leader>f", "<cmd> Telescope find_files <cr>")
         vim.keymap.set("n", "<leader>pf", "<cmd> Telescope git_files <cr>", {})
         vim.keymap.set("n", "<leader>/", "<cmd> Telescope live_grep<cr>", {})
+        vim.keymap.set("n", "<leader>;", "<cmd> Telescope buffers<cr>", {})
     end
 }
