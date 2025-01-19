@@ -12,6 +12,9 @@ abbr gc git commit -am
 abbr gcl git clone
 abbr gck git checkout
 abbr gp git push
+abbr gb git branch
+abbr z zellij
+abbr zl zellij --layout
 
 if command -v eza >/dev/null
     abbr l eza
@@ -27,10 +30,10 @@ else
 end
 
 # https://zellij.dev/documentation/integration
-if set -q ZELLIJ
-else
-    zellij
-end
+# if set -q ZELLIJ
+# else
+    # zellij
+# end
 
 if command -v fvm >/dev/null
     abbr f 'fvm flutter'
