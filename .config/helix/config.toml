@@ -7,3 +7,4 @@ bufferline = "multiple"
 cursorline = true
 # Add relative line numbers
 line-number = "relative"
+rulers = [100]
