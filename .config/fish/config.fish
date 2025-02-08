@@ -2,10 +2,10 @@
 set fish_greeting
 
 abbr z zellij
+abbr e helix
 abbr c cargo
 abbr ca cargo add
 abbr cr cargo run
-abbr cl cargo clean
 abbr g git
 abbr gs git status
 abbr gc git commit -am
@@ -15,12 +15,6 @@ abbr gp git push
 abbr gb git branch
 abbr z zellij
 abbr zl zellij --layout
-
-if command -v hx >/dev/null
-    abbr e hx
-else if command -v helix >/dev/null
-    abbr e helix
-end
 
 if command -v eza >/dev/null
     abbr l eza
@@ -38,7 +32,7 @@ end
 # https://zellij.dev/documentation/integration
 # if set -q ZELLIJ
 # else
-# zellij
+    # zellij
 # end
 
 if command -v fvm >/dev/null
@@ -61,7 +55,7 @@ if [ "$TTY1" = /dev/tty1 ]
 end
 
 function fish_prompt
-    set_color brwhite
+    set_color brblack
     echo -n "["(date "+%H:%M")"] "
     set_color blue
     echo -n $USER
@@ -75,14 +69,14 @@ function fish_prompt
         echo -n (hostname)
     end
     if [ $PWD != $HOME ]
-        set_color brwhite
+        set_color brblack
         echo -n ':'
         set_color yellow
         echo -n (basename $PWD)
     end
     set_color green
     printf '%s ' (__fish_git_prompt)
-    set_color brwhite
+    set_color brblack
     echo -n '| '
-    # set_color brwhite
+    set_color normal
 end
