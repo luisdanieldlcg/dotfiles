@@ -1,22 +1,14 @@
 [general]
 import = [
-    "~/dotfiles/.config/alacritty/themes/kanagawa_dragon.toml"
-    # "~/dotfiles/.config/alacritty/themes/gruvbox_material.toml"
+    # "~/dotfiles/.config/alacritty/themes/kanagawa_dragon.toml"
+    "~/dotfiles/.config/alacritty/themes/gruvbox_material.toml"
 ]
 
-[cursor.style]
-shape = "Block"
-
-[cursor.vi_mode_style]
-shape = "Block"
-
 [font]
-size = 12
+size = 11
 
 [font.normal]
 family = "Fira Code"
-# family = "Mononoki Nerd Font"
-# family = "Iosevka"
 
 [[keyboard.bindings]]
 action = "None"

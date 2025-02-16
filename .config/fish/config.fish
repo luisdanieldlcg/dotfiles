@@ -16,6 +16,8 @@ abbr gb git branch
 abbr z zellij
 abbr zl zellij --layout
 
+set fish_term24bit 1
+
 if command -v eza >/dev/null
     abbr l eza
     abbr ls eza
