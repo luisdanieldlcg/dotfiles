@@ -3,16 +3,27 @@
 cd "$(dirname "$0")/.."
 DOTFILES=$HOME/dotfiles/.config
 
-find -H "$DOTFILES" -name 'link.path' | while read linkfile
-do
-  cat "$linkfile" | while read line
+install() {
+  
+  find -H "$DOTFILES" -name 'link.path' | while read linkfile
   do
-    src=$(eval echo "$line" | cut -d '=' -f 1)
-    dst=$(eval echo "$line" | cut -d '=' -f 2)
-    dir=$(dirname "$dst")gs 
-    echo "Linking $dst -> $src"
-    mkdir -p "$dir"
-    rm -rf $dst
-    ln -s $src $dst
-  done  
-done 
+    cat "$linkfile" | while read line
+    do
+      local src dst dir
+      src=$(eval echo "$line" | cut -d '=' -f 1)
+      dst=$(eval echo "$line" | cut -d '=' -f 2)
+      dir=$(dirname "$dst")
+      echo "The directory: $dst will be linked (symlink) to $src"
+      mkdir -p "$dir"
+      link_file "$src" "$dst"
+    done  
+  done 
+}
+
+link_file() {
+  local src=$1 dst=$2
+  rm -rf $dst
+  ln -s $src $dst
+ }
+
+install
