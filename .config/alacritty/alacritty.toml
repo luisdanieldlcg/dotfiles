@@ -1,7 +1,6 @@
 [general]
 import = [
-    # "~/dotfiles/.config/alacritty/themes/kanagawa_dragon.toml"
-    "~/dotfiles/.config/alacritty/themes/gruvbox_material.toml"
+    "~/dotfiles/.config/alacritty/themes/gruvbox_material_hard_dark.toml"
 ]
 
 [font]
@@ -15,9 +14,6 @@ action = "None"
 key = "N"
 mods = "Command"
 
-[window]
-opacity = 1.0
-
 [window.padding]
-x = 15
-y = 15
+y = 5
+x = 5
