@@ -21,6 +21,7 @@ return {
 			keymap.set("n", "gd", "<cmd>Telescope lsp_definitions<CR>", opts);
 			keymap.set("n", "gr", "<cmd>Telescope lsp_references<CR>", opts);
 			keymap.set("n", "gD", vim.lsp.buf.declaration, opts);
+			keymap.set("n", "<leader>d", vim.diagnostic.open_float, opts);
 			keymap.set("n", "<leader>a", vim.lsp.buf.code_action, opts);
 			keymap.set("n", "<leader>r", vim.lsp.buf.rename, opts);
 			keymap.set('n', '<leader>k', vim.lsp.buf.hover, opts);
@@ -52,7 +53,7 @@ return {
             on_attach = on_attach,
         })
 
-        lsp["dartls"].setup({
+       lsp["dartls"].setup({
             capabilities = caps,
             on_attach = on_attach,
         })
