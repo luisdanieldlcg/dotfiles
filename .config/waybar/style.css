@@ -5,75 +5,63 @@
     border-radius: 0;
 }
 
-window#waybar { 
-    background-color: #225877; 
-    color: #ffffff;    
+@define-color bg rgba(24, 23, 24, 1.0);
+@define-color button_bg #dee2e6;
+@define-color active #181C14;
+
+window#waybar {
+  background-color: @bg;
+  color: #ffffff;
 }
 
-.modules-left {
-	background-color: #323232;
-	padding: 0px 0px 0px 0px;
+window {
+  font-weight: bold;
 }
 
-.modules-right {
-	background-color: #323232;
-	padding: 0px 5px 0px 0px;
-    padding-left: 10px;
+tooltip {
+  background: #282828;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #1d2021;
 }
 
-#custom-scratch {
-	background-color: #323232;
-	color: #b8b8b8;
-	padding: 0px 9px 0px 9px;
-}
-
+ #workspaces {
+  padding: 0 0.2em;
+  margin-top: 4px;
+  margin-bottom: 4px;
+} 
 
 #workspaces button {
-	padding: 0px 11px 0px 11px; 
- 	min-width: 1px;
-	color: #888888;
+    color: grey;
 }
 
-#workspaces button.focused { 
-	padding: 0px 11px 0px 11px; 
-	background-color: #285577;
-	color: #ffffff;
-    border: 0.1px solid black;
+#workspaces button.active {
+  color: white;
+  border-radius: 8px;
 }
 
-#mode { 
-	 background-color: #900000;
-	 color: #ffffff;
-     font-size: 14px;
+#workspaces button.urgent {
+  background: #f38ba8;
 }
 
-
-#window {
-	 color: #ffffff;
-	 background-color: #285577;
-     padding: 0px 10px 0px 10px;
+#custom-power,
+#date,
+#pulseaudio,
+#network,
+#language,
+#clock{
+  font-weight: 400;
+  border-radius: 12px;
+  padding: 0.4rem 0.5em;
+  margin-right: 4px;
+  margin-left: 4px;
+  margin-top: 4px;
+  margin-bottom: 4px;
 }
-
-window#waybar.empty #window {
-	background-color: transparent;
-	color: transparent;
-}
-
-#pulseaudio {
-    margin-left: 7px;
-    margin-right: 12px;
-}
-
-#clock {
-	margin: 0px 15px 0px 15px;
-}
-
-#network.disconnected {
-    color: #ff5555;
-}
-
 
 #custom-power {
-    margin-top: 3px;
-    color: red;
+  color: #fb4934;
+  margin-right: 12px;
+  margin-top: 3px;
 }
+

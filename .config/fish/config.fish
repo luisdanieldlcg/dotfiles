@@ -17,6 +17,7 @@ abbr z zellij
 abbr zl zellij --layout
 
 set fish_term24bit 1
+set -Ux EDITOR nvim
 
 if command -v eza >/dev/null
     abbr l eza
