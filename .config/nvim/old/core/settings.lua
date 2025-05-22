@@ -8,7 +8,7 @@ opt.wrap = false
 opt.tabstop = 4
 opt.shiftwidth = 4
 opt.softtabstop = 4
-opt.expandtab = true
+opt.expandtab = false
 opt.smartindent = true
 -- case-insensitive search/replace
 opt.ignorecase = true
