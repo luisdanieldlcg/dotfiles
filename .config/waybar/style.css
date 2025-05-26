@@ -1,67 +1,74 @@
 * {
-    font-family: Fira Code;
-    font-size: 13px;
-    min-height: 0;
-    border-radius: 0;
+	font-size: 13px;
+	font-family: Fira Code;
 }
-
-@define-color bg rgba(24, 23, 24, 1.0);
-@define-color button_bg #dee2e6;
-@define-color active #181C14;
 
 window#waybar {
-  background-color: @bg;
-  color: #ffffff;
+	background: #292b2e;
+	color: #fdf6e3;
 }
 
-window {
-  font-weight: bold;
+#custom-right-arrow-dark,
+#custom-left-arrow-dark {
+	color: #1a1a1a;
+}
+#custom-right-arrow-light,
+#custom-left-arrow-light {
+	color: #292b2e;
+	background: #1a1a1a;
 }
 
-tooltip {
-  background: #282828;
-  border-width: 2px;
-  border-style: solid;
-  border-color: #1d2021;
+#workspaces,
+#clock.1,
+#clock.2,
+#clock.3,
+#pulseaudio,
+#memory,
+#cpu,
+#battery,
+#disk,
+#tray {
+	background: #1a1a1a;
 }
-
- #workspaces {
-  padding: 0 0.2em;
-  margin-top: 4px;
-  margin-bottom: 4px;
-} 
 
 #workspaces button {
-    color: grey;
+	padding: 0 2px;
+	color: #fdf6e3;
+}
+#workspaces button.focused {
+	color: #268bd2;
+}
+#workspaces button:hover {
+	box-shadow: inherit;
+	text-shadow: inherit;
+}
+#workspaces button:hover {
+	background: #1a1a1a;
+	border: #1a1a1a;
+	padding: 0 3px;
 }
 
-#workspaces button.active {
-  color: white;
-  border-radius: 8px;
+#pulseaudio {
+	color: #268bd2;
+}
+#memory {
+	color: #2aa198;
+}
+#cpu {
+	color: #6c71c4;
+}
+#battery {
+	color: #859900;
+}
+#disk {
+	color: #b58900;
 }
 
-#workspaces button.urgent {
-  background: #f38ba8;
-}
-
-#custom-power,
-#date,
+#clock,
 #pulseaudio,
-#network,
-#language,
-#clock{
-  font-weight: 400;
-  border-radius: 12px;
-  padding: 0.4rem 0.5em;
-  margin-right: 4px;
-  margin-left: 4px;
-  margin-top: 4px;
-  margin-bottom: 4px;
+#memory,
+#cpu,
+#battery,
+#disk {
+	padding: 0 10px;
 }
-
-#custom-power {
-  color: #fb4934;
-  margin-right: 12px;
-  margin-top: 3px;
-}
-

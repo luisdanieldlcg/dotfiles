@@ -15,6 +15,11 @@ abbr gp git push
 abbr gb git branch
 abbr z zellij
 abbr zl zellij --layout
+abbr hx helix
+
+function fwatch
+    zellij --layout="flutter"
+end
 
 set fish_term24bit 1
 set -Ux EDITOR nvim
@@ -35,7 +40,7 @@ end
 # https://zellij.dev/documentation/integration
 # if set -q ZELLIJ
 # else
-    # zellij
+# zellij
 # end
 
 if command -v fvm >/dev/null
@@ -52,14 +57,13 @@ else
     abbr fpg flutter pub get
 end
 
+set TTY1 (tty)
+
 if [ "$TTY1" = /dev/tty1 ]
-    then
     exec Hyprland
 end
 
 function fish_prompt
-    set_color brblack
-    echo -n "["(date "+%H:%M")"] "
     set_color blue
     echo -n $USER
     set_color brwhite
@@ -82,4 +86,13 @@ function fish_prompt
     set_color brblack
     echo -n '| '
     set_color normal
+end
+
+function y
+    set tmp (mktemp -t "yazi-cwd.XXXXXX")
+    yazi $argv --cwd-file="$tmp"
+    if read -z cwd <"$tmp"; and [ -n "$cwd" ]; and [ "$cwd" != "$PWD" ]
+        builtin cd -- "$cwd"
+    end
+    rm -f -- "$tmp"
 end

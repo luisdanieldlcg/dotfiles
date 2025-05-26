@@ -1,10 +1,8 @@
-theme = "catppuccin_frappe"
+theme = "gruvbox_dark_hard"
 
 [editor]
 # Display any opened buffer
 bufferline = "multiple"
-# Highlight the cursor line
-cursorline = true
 # Add relative line numbers
 line-number = "relative"
 
