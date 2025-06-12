@@ -15,14 +15,9 @@ abbr gp git push
 abbr gb git branch
 abbr z zellij
 abbr zl zellij --layout
-abbr hx helix
 
-function fwatch
-    zellij --layout="flutter"
-end
-
+set -Ux EDITOR helix
 set fish_term24bit 1
-set -Ux EDITOR nvim
 
 if command -v eza >/dev/null
     abbr l eza
@@ -35,6 +30,10 @@ if command -v paru >/dev/null
     abbr p paru
 else
     abbr p 'sudo pacman -Syu'
+end
+
+if command -v helix >/dev/null
+    abbr hx helix
 end
 
 # https://zellij.dev/documentation/integration
@@ -95,4 +94,9 @@ function y
         builtin cd -- "$cwd"
     end
     rm -f -- "$tmp"
+end
+
+function fwatch
+    set PID_FILE "/tmp/tf"(random)".pid"
+    zellij --layout="flutter"
 end

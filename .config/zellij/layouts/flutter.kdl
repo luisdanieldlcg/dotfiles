@@ -1,15 +1,34 @@
 layout {
-    default_tab_template  {
-        children
-        // the default zellij tab-bar and status bar plugins
+    default_tab_template {
         pane size=1 borderless=true {
             plugin location="zellij:tab-bar"
         }
-        floating_panes exact_panes=1 {
-            pane
+        children
+        pane size=2 borderless=true {
+            plugin location="zellij:status-bar"
         }
     }
-    tab name="code"
-    // tab name="shell"
+    
+    tab name="code" focus=true {
+        pane {
+            command "yazi"
+        }
+        floating_panes {
+            pane {
+                command "flutter"
+                args "run" "--pid-file=/tmp/flutter-watch.pid"
+                width "80%"
+                height "60%"
+                x "10%"
+                y "20%"
+            }
+        }
+    }
+    
+    tab name="watcher" {
+        pane {
+            command "bash"
+            args "-c" "while [ ! -f /tmp/flutter-watch.pid ]; do sleep 1; done; npx -y nodemon -e dart -x 'test -f /tmp/flutter-watch.pid && cat /tmp/flutter-watch.pid | xargs kill -s USR1'"
+        }
+    }
 }
-
