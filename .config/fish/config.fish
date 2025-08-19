@@ -15,6 +15,7 @@ abbr gp git push
 abbr gb git branch
 abbr z zellij
 abbr zl zellij --layout
+abbr fwatch watchexec -w . -e dart "zellij action move-focus down && zellij action write-chars 'r' && zellij action move-focus up"
 
 set -Ux EDITOR helix
 set fish_term24bit 1
@@ -30,10 +31,6 @@ if command -v paru >/dev/null
     abbr p paru
 else
     abbr p 'sudo pacman -Syu'
-end
-
-if command -v helix >/dev/null
-    abbr hx helix
 end
 
 # https://zellij.dev/documentation/integration
